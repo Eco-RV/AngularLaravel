@@ -1,0 +1,92 @@
+<div class="main-productos">
+  <nav class="navbar fixed-top">
+    <div class="item-container">
+      <div class="item"><a [routerLink]="['/superusuario/usuarios']">Usuarios</a></div>
+    </div>
+
+    <div class="item-container">
+      <div class="item"><a [routerLink]="['/superusuario/facturas']">Facturas</a></div>
+    </div>
+    <div class="item-container">
+      <div class="item"><a [routerLink]="['/superusuario/productos']">Productos</a></div>
+    </div>
+    <div class="item-container">
+      <div class="item">
+        <a [routerLink]="['/paginaprincipal/login']">LogOut</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Body -->
+
+  <div class="container">
+    <!-- Item Container -->
+    <div class="content-half-items">
+      <!-- Atributos -->
+      <div class="atr-content">
+        <div>Nombre</div>
+        <div>Precio</div>
+        <div>Cantidad</div>
+      </div>
+      <!-- Item -->
+      <div *ngFor="let producto of productos">
+        <div class="item-content ">
+          <div class="item-data">
+            <div class="data-1">
+              {{producto.nom}}
+            </div>
+            <div class="data-2">
+              {{producto.pre_uni}}
+            </div>
+            <div class="data-3">
+              {{producto.cant}}
+            </div>
+          </div>
+          <div class="item-btn-edit">
+            <button class="btn-edit" type="button" (click)="mostrarFormEditar(producto.id)">
+              Editar
+            </button>
+          </div>
+          <div class="item-btn-delete">
+            <button type="button" (click)="eliminar(producto.id)" class="btn-delete">Eliminar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Form Container -->
+    <div class="content-half-window">
+      <!-- Btn Agregar -->
+      <div class="btn-content">
+        <button class="btn-agregar" (click)="mostrarFormAdd()">Agregar</button>
+      </div>
+      <div class="window-container">
+        <div class="form-container">
+          <!--Editar-->
+          <form action="" [formGroup]="form" class="form-edit d-none" (ngSubmit)="editar()">
+            <h2>Editar</h2>
+            <input formControlName="nom" id="nom" type="text" placeholder="Manzana">
+            <input formControlName="desc" id="desc" type="text" placeholder="Fruto Proveniente del Manzano">
+            <input formControlName="pre_uni" id="pre_uni" type="num" placeholder="₡250">
+            <input formControlName="can" id="can" type="num" placeholder="20">
+            <input formControlName="cat" id="cat" type="text" placeholder="Frutas, Verdura, Especias">
+            <button>Editar</button>
+          </form>
+          <!--Agregar-->
+          <form action="" [formGroup]="form" class="form-add d-none" (ngSubmit)="submit()">
+            <h2>Agregar</h2>
+            <input formControlName="nom" id="nom" type="text" placeholder="Manzana">
+            <input formControlName="desc" id="desc" type="text" placeholder="Fruto Proveniente del Manzano">
+            <input formControlName="pre_uni" id="pre_uni" type="num" placeholder="₡250">
+            <input formControlName="can" id="can" type="num" placeholder="20">
+            <input formControlName="cat" id="cat" type="text" placeholder="Frutas, Verdura, Especias">
+
+            <button class="button" type="submit">Agregar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,254 @@
+/* -- NavBar*/
+.navbar {
+  height: 100px;
+  width: 100%;
+  background-color: #072a40;
+  display: flex;
+  transition: all ease-in-out 250ms;
+}
+
+.item-container {
+  display: flex;
+  width: 25%;
+  padding-left: 200px;
+}
+
+.item a{
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: white;
+}
+
+/* -- End NavBar*/
+
+/* Container */
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  margin: 0;
+}
+
+/* Item Container Half */
+
+
+
+.content-half-items {
+  margin-top: 150px;
+  height: 800px;
+  width: 100%;
+}
+
+
+
+/* ------ Atributos*/
+
+.atr-content  {
+  width: 78%;
+  display: flex;
+  height: auto;
+  margin-bottom: 20px;
+  color: white;
+  justify-content: space-around ;
+
+
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+/* ----------- Item*/
+
+.item-content {
+  display: flex;
+  height: auto;
+  justify-content: space-between ;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/*Data*/
+
+.item-data {
+  color: white;
+  background-color: #072a40;
+  border-radius: 10px;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.data-1 {
+  color: white;
+  width: 50px;
+}
+
+.data-2 {
+  color: white;
+}
+
+.data-3 {
+  color: white;
+}
+
+
+
+/*Btn Delete*/
+
+.item-btn-delete {
+  color: white;
+  width: 20%;
+}
+
+.btn-delete {
+  width: 100%;
+  width: 100%;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #990e3c;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  outline: none;
+}
+
+/*Btn Agregar*/
+
+.btn-content {
+  color: white;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.btn-agregar {
+  width: 100%;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #00d659da;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  outline: none;
+}
+
+
+/* ----------- End Item*/
+
+/* Window Container Half */
+
+.content-half-window {
+  margin-top: 140px;
+  height: 800px;
+  width: 100%;
+  padding:0px 50px;
+}
+
+/* ----------- Window*/
+
+.window-container {
+  background-color: #072a40;
+  padding: 30px 60px;
+  width: 100%;
+  border-radius: 20px;
+  height: auto;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+
+}
+
+/* ----- Form Add*/
+
+
+.form-add {
+  width: 100%;
+  display: none;
+}
+
+.form-add h2 {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.form-add input {
+  width: 100%;
+  height: 55px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: solid rgb(224, 224, 224);
+  border-radius: 8px;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+  color:white
+}
+
+.form-add button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px 40px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #18b7be;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  outline: none;
+}
+
+/* ----- Form Edit*/
+
+.form-edit {
+  width: 100%;
+}
+
+.form-edit h2 {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.form-edit input {
+  width: 100%;
+  height: 55px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: solid rgb(224, 224, 224);
+  border-radius: 8px;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+  color:white
+}
+
+.form-edit button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px 40px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #18b7be;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  outline: none;
+}
+
+/* ----------- End Window*/

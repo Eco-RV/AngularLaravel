@@ -1,0 +1,9 @@
+@font-face {
+  font-family: Anton;
+  src: url("./Anton-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Neue;
+  src: url("./BebasNeue-Regular.ttf") format("truetype");
+}

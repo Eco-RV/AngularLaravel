@@ -1,0 +1,84 @@
+
+<nav class="navbar fixed-top" (scroll)="onWindowScroll()">
+  <div class="nav-item">
+    <p class="nav-shop">
+      <a routerLink="/producto/lista">
+        Inicio
+      </a>
+    </p>
+  </div>
+  <div class="nav-item">
+    <a routerLink="/producto/checkout">
+      <div class="nav-checkout">
+        <div class="icon-container">
+          <em class=" icon material-icons" id="icon">shopping_cart</em>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="nav-item">
+    <p class="nav-shop">
+      <a routerLink="/paginaprincipal/login">
+        LogOut
+      </a>
+    </p>
+  </div>
+</nav>
+
+<div class="atr-container">
+  <div class="atr-item-container">
+    <div class="atr-item-half">
+      <p class="atr-text"> Nombre </p>
+    </div>
+    <div class="atr-item-half">
+      <p class="atr-text"> Cantidad </p>
+    </div>
+    <div class="atr-item-half">
+      <p class="atr-text"> Precio </p>
+    </div>
+    <div class="atr-item-half">
+      <p class="atr-text"> SubTotal </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="check-container">
+  <div *ngFor="let item of items">
+    <div class="item-container">
+      <div class="item-container-half">
+        <p class="item-name">{{item.nom}}</p>
+      </div>
+      <div class="item-container-half">
+        <p class="item-cant">{{item.cantlleva}}</p>
+      </div>
+      <div class="item-container-half">
+        <p class="item-price">₡{{ item.pre_uni }}</p>
+      </div>
+      <div class="item-container-half">
+        <p class="item-price">₡{{ item.pre_uni * item.cantlleva }}</p>
+      </div>
+      <div class="item-container-half-btn">
+        <button
+          class="btn-delete"
+          type="button"
+          (click)="deleteFromCart(item)"
+        >
+          X
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="item-container-btn">
+    <button class="btn" (click)="comprar()" type="button">
+      Comprar
+    </button>
+  </div>
+</div>
+
+
+
+
+
+
+

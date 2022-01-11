@@ -1,0 +1,165 @@
+/* -- NavBar*/
+
+.navbar {
+  height: 100px;
+  width: 100%;
+  background-color: transparent;
+  transition: all ease-in-out 250ms;
+}
+
+.bg-primary-g{
+  background-color: #072a40;
+}
+
+
+
+.nav-item {
+  width: 20%;
+  line-height: 90px;
+  height: 90px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.nav-title {
+  font-family: Anton;
+  color: white;
+}
+
+
+.nav-shop {
+  font-family: Anton;
+  color: white;
+}
+.nav-shop a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+
+.nav-checkout {
+  width: 100%;
+  height: 95%;
+  padding-left: 100px;
+}
+
+
+
+.icon-container {
+  width: 200px;
+  height: 100%;
+  border-radius: 300px;
+  float: left;
+  background-color: white;
+  padding-top: 15px;
+}
+
+.icon {
+  color: #178CA4;
+  font-size: 60px;
+}
+
+
+
+.btn-color-cant  {
+  color: #072a40;
+}
+
+.btn-color-icon  {
+  color: #072a40;
+}
+
+
+/* -- End NavBar*/
+
+.fact-container {
+    padding-top: 250px;
+    padding-left: 300px;
+    padding-right: 300px;
+    width: auto;
+}
+
+.title-container {
+    width: 100%;
+    height: auto;
+    color: white;
+    font-family: Anton;
+    font-size: 60px;
+    text-align: center;
+}
+
+.user-container {
+  text-align: left;
+  margin-top: 40px;
+  font-size: 30px;
+  font-family: Neue;
+  color: white;
+}
+
+/*Atributos*/
+
+.atr-container {
+  width: 100%;
+}
+
+.atr-half {
+  width: 25%;
+  margin-top: 20px;
+  float: left;
+  font-size: 25px;
+  font-family: Neue;
+  color: white;
+  text-align: center;
+}
+
+/*Items*/
+
+.item-container {
+  width: 100%;
+}
+
+.item-half {
+  width: 25%;
+  float: left;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  background-color: #072a40;
+  border-bottom: 1px solid #041c2b;
+}
+
+/*Under*/
+
+.under-container {
+  width: 100%;
+}
+
+.tot-container {
+  width: 50%;
+  float: left;
+  text-align: right;
+  color: white;
+  font-family: Neue;
+  font-size: 40px;
+}
+
+.btn-container {
+  width: 50%;
+  float: left;
+  font-size: 30px;
+  font-family: Anton;
+}
+
+.btn {
+  text-align: center;
+  background-color: #072a40;
+  color: white;
+  width: 150px;
+  border-radius: 20px;
+}
+
+.icon {
+  margin-top: 10px;
+}
+

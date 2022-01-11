@@ -1,0 +1,66 @@
+<nav class="navbar fixed-top" (scroll)="onWindowScroll()">
+  <div class="nav-item">
+    <div class="stock-tienda" style="margin-left: auto" >
+      <p routerLink="/admin/stock">Stock</p>
+    </div>
+  </div>
+  <!-- Filtro Termina -->
+  <div class="nav-item">
+    <div class="agregar-prod">
+      <p routerLink="/admin/stock/agregar">Nuevo Producto</p>
+    </div>
+  </div>
+  <div class="nav-item">
+    <div class="stock-tienda">
+      <p routerLink="/paginaprincipal/login">LogOut</p>
+    </div>
+  </div>
+</nav>
+
+<div class="list-item-container">
+  <div class="main-register">
+    <h1 class="title">Producto</h1>
+    <form [formGroup]="form" class="form" (ngSubmit)="submit()">
+
+      <!-- Imagen -->
+
+
+      <!-- Nombre Producto -->
+      <div class="field required px-1">
+        <label class="label-atr" for="nom">Nombre Producto</label>
+        <input class="text-input" formControlName="nom" id="nom" type="text" placeholder="Manzana" />
+      </div>
+
+      <!-- Descripcion Producto -->
+      <div class="field required px-1">
+        <label class="label-atr" for="desc">Descripcion</label>
+        <input class="text-input" formControlName="desc" id="desc" type="text" placeholder="Fruto Proveniente del Manzano"/>
+      </div>
+
+      <!-- Precio Producto -->
+      <div class="field required px-1">
+        <label class="label-atr" for="pre_uni">Precio Unitario</label>
+        <input class="text-input" formControlName="pre_uni" id="pre_uni" type="num" placeholder="₡250" />
+      </div>
+
+      <!-- Precio Producto -->
+      <div class="field required px-1">
+        <label class="label-atr" for="can">Cantidad</label>
+        <input class="text-input" formControlName="can" id="can" type="num" placeholder="20" />
+      </div>
+
+      <!-- Categoria Producto -->
+      <div class="field required px-1">
+        <label class="label-atr" for="cat">Categoria</label>
+        <input class="text-input" formControlName="cat" id="cat" type="text" placeholder="Frutas, Verdura, Especias" />
+      </div>
+
+      <!-- Boton de subida -->
+      <div class="field-half required px-1">
+        <button class="button" type="submit">
+          Agregar Producto
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<div class="main-login">
+  <!-- Login -->
+  <div class="container">
+    <div class="form-content">
+      <form [formGroup]="form">
+        <h2>Iniciar Sesión</h2>
+        <input
+          class="text-input"
+          formControlName="email"
+          id="email"
+          type="email"
+          placeholder="example@gmail.com"
+        />
+        <input
+        class="text-input"
+        formControlName="password"
+        id="password"
+        type="password"
+        placeholder="********"
+      />
+        <button (click)="submit()" type="button">Entrar</button>
+      </form>
+      <br />
+      <a [routerLink]="['/paginaprincipal/register']">Sing Up</a>
+    </div>
+  </div>
+
+  <!-- Atributos -->
+  <div class="text-container">
+    <div class="title-container">
+      <div class="title-stock">Stock</div>
+      <div class="title-sales">Compras</div>
+    </div>
+    <div class="atr-container">
+      <div class="atr-stock-container">
+        <div class="atr-1">Nombre</div>
+        <div class="atr-2">Precio</div>
+        <div class="atr-3">Cant</div>
+      </div>
+      <div class="atr-sales-container">
+        <div class="atr-1">ID</div>
+        <div class="atr-2">Nombre</div>
+        <div class="atr-3">Tot</div>
+      </div>
+    </div>
+  </div>
+  <!-- Datos Tienda -->
+  <div class="data-container">
+    <!-- Stock -->
+    <div class="data-stock-container">
+      <!-- Stock Item -->
+      <div *ngFor="let producto of productos">
+        <div class="stock-item">
+          <div class="item-1"> {{producto.nom}} </div>
+          <div class="item-2">  ₡{{producto.pre_uni}} </div>
+          <div class="item-3"> {{producto.cant}} </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sales -->
+    <div class="data-sales-container">
+      <!-- Sales Item -->
+      <div *ngFor="let factura of facturas">
+        <div class="sales-item">
+          <div class="item-1"> {{factura.usuario_id}} </div>
+          <div class="item-2">  {{factura.usuario.nom}}</div>
+          <div class="item-3"> {{ factura.tot }} </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Información -->
+  <div class="end-container">
+
+  </div>
+</div>

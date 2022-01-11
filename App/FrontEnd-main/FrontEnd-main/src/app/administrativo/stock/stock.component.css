@@ -1,0 +1,382 @@
+/* -- NavBar*/
+
+.navbar {
+  height: 100px;
+  width: 100%;
+  background-color: transparent;
+  transition: all ease-in-out 250ms;
+}
+
+.bg-primary-g{
+  background-color: #072a40;
+}
+
+.nav-item {
+  width: 20%;
+  line-height: 90px;
+  height: 90px;
+  text-align: center;
+}
+
+.nav-title {
+  border-radius: 30px;
+  background-color: #64c4af;
+  color: white;
+  font-family: Anton;
+  border: 2px;
+  border-color: transparent;
+  border-style: solid;
+  width: 75%;
+  height: 75px;
+  font-size: 35px;
+  cursor: pointer;
+  align-items: center;
+  align-content: center;
+}
+
+
+.nav-shop {
+  font-family: Anton;
+  font-size: 35px;
+  color: white;
+}
+
+.nav-shop a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+
+.nav-checkout {
+  width: 100%;
+  height: 95%;
+  padding-left: 100px;
+}
+
+
+
+.icon-container {
+  width: 200px;
+  height: 100%;
+  border-radius: 300px;
+  float: left;
+  background-color: white;
+  padding-top: 15px;
+}
+
+.icon {
+  color: #178CA4;
+  font-size: 60px;
+}
+
+
+
+.btn-color-cant  {
+  color: #072a40;
+}
+
+.btn-color-icon  {
+  color: #072a40;
+}
+
+
+/* -- End NavBar*/
+
+
+.list-container {
+  padding-top: 120px;
+}
+
+.list-item-container {
+
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 60px;
+
+}
+
+
+/*Item*/
+.list-item {
+  width: 300px;
+  height: 775px;
+  margin: 20px;
+  float: left;
+  overflow:hidden;
+
+  background-color: #072a40;
+  border-color: #24d0da;
+  transition: 0.3s ease-in-out;
+
+}
+
+
+
+/*Efecto*/
+.list-item:hover {
+  transform: scale(1.04);
+}
+
+
+/*Imagen*/
+
+.item-image {
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/*Contenido Item (atr - desc - price)*/
+.item-content{
+  padding: 30px;
+}
+
+
+
+.item-atr {
+  color: #18b7be;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: Neue;
+  position: absolute;
+}
+
+.item-text {
+  color: white;
+  font-weight: lighter;
+  text-align: right;
+  margin-right: 10px;
+  font-size: 20px;
+  font-family: Neue;
+  overflow: hidden;
+}
+
+.desc-container {
+  height: 120px;
+}
+
+
+/*Titulo*/
+
+.item-title-box {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #64c4af;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding-top: 8px;
+}
+
+.item-title-name {
+  text-align: center;
+  color:white;
+  font-family: Neue;
+}
+
+
+
+/*Fin titulo */
+
+
+
+
+
+
+/*Botones Item*/
+
+/*Agregar*/
+
+.btn-agregar {
+  font-weight: bold;
+  margin-top: 20px;
+  height: 45px;
+  width: 100%;
+  background-color: #64c4af;
+  color: white;
+  border-radius: 30px;
+  border: #072a40;
+}
+
+.btn-agregar:hover {
+  background-color: #47b19a;
+}
+
+/*Fin Agregar*/
+
+.cant-container {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.cant-half {
+  width: 33%;
+  float:left;
+  text-align: center;
+}
+
+.cant-half-label {
+  width: 33%;
+  float:left;
+  height: 40px;
+  text-align: center;
+  background-color: #64c4af;
+  color: white;
+  border-radius: 30px;
+}
+
+.cant-label {
+  color:white;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+.btn-max {
+  background-color: transparent;
+  color: white;
+  width: 40px;
+  height: 40px;
+}
+
+.btn-max:hover {
+  background-color: #47b19a;
+}
+
+.btn-min {
+  background-color: transparent;
+  color: white;
+  width: 40px;
+  height: 40px;
+}
+
+.btn-min:hover {
+  background-color: #47b19a;
+}
+
+.agregar-prod{
+  border-radius: 30px;
+  background-color: transparent;
+  color: white;
+  font-family: Anton;
+  border: 2px;
+  border-color: transparent;
+  border-style: solid;
+  margin-left: 0px;
+  width: 70%;
+  height: 120%;
+  font-size: 25px;
+  cursor: pointer;
+  align-items: center;
+  align-content: center;
+}
+
+.stock-tienda{
+  border-radius: 30px;
+  background-color: transparent;
+  color: white;
+  font-family: Anton;
+  border: 2px;
+  border-color: transparent;
+  border-style: solid;
+  margin-left: 0px;
+  width: 100%;
+  height: 75px;
+  font-size: 35px;
+  cursor: pointer;
+  align-items: center;
+  align-content: center;
+}
+
+/*DropDown*/
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+}
+
+.dropdown-item {
+  border-radius: 30px;
+  background-color: #64c4af;
+  color: white;
+  font-family: Anton;
+  border: 2px;
+  border-color: transparent;
+  border-style: solid;
+  width: 100%;
+  height: 75px;
+  font-size: 25px;
+}
+
+.dropdown-btn {
+  border-radius: 30px;
+  background-color: white;
+  color: #178CA4;
+  font-family: Anton;
+  border: 2px;
+  border-color: transparent;
+  border-style: solid;
+  width: 160px;
+  height: 70px;
+  font-size: 35px;
+  cursor: pointer;
+  align-items: center;
+  align-content: center;
+}
+
+.dropdown-btn-g {
+  color: #072a40;
+}
+
+.dropdown-content {
+
+  border-radius: 30px;
+  display: none;
+  position: absolute;
+  color: #178CA4;
+  background-color: white;
+  border: 2px;
+  border-color: transparent;
+  border-style: solid;
+  min-width: 160px;
+  margin-top: 0px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #072a40;
+  background-color: white;
+  font-family: Neue;
+  display: none;
+  font-size: 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 25px;
+}
+
+.dropdown-content-g-a {
+  color: #178CA4;
+}
+
+.dropdown-content a:hover {
+  background-color: #072a40
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.dropdown-content a:hover {background-color: #ddd; color: #000000;}
+
+

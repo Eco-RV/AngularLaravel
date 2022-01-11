@@ -1,0 +1,61 @@
+<div class="main-facturas">
+  <nav class="navbar fixed-top">
+    <div class="item-container">
+      <div class="item">
+        <a [routerLink]="['/superusuario/usuarios']">Usuarios</a>
+      </div>
+    </div>
+    <div class="item-container">
+      <div class="item">
+        <a [routerLink]="['/superusuario/facturas']">Facturas</a>
+      </div>
+    </div>
+    <div class="item-container">
+      <div class="item">
+        <a [routerLink]="['/superusuario/productos']">Productos</a>
+      </div>
+    </div>
+    <div class="item-container">
+      <div class="item">
+        <a [routerLink]="['/paginaprincipal/login']">LogOut</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cuerpo -->
+
+  <div class="container">
+    <!-- Item Container -->
+    <div class="content-half-items">
+      <!-- Atributos -->
+      <div class="atr-content">
+        <div>ID Facturas</div>
+        <div>Nombre</div>
+        <div>Total</div>
+      </div>
+      <!-- Item -->
+      <div *ngFor="let fact of facturas">
+        <div class="item-content">
+          <div class="item-data">
+            <div class="data-1">
+              {{fact.id}}
+            </div>
+            <div class="data-2">
+              {{fact.usuario.nom}}
+            </div>
+            <div class="data-3">
+              {{ fact.tot }}
+            </div>
+          </div>
+          <div class="item-btn-delete">
+            <button class="btn-delete" (click)="eliminar(fact.id)">Eliminar</button>
+          </div>
+        </div>
+      </div>
+      <!-- Btn Agregar -->
+      <div class="btn-content">
+        <button class="btn-agregar"  [routerLink]="['/']" >Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>

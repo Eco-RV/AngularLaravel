@@ -1,0 +1,85 @@
+<div class="fact-container">
+
+
+    <nav class="navbar fixed-top" (scroll)="onWindowScroll()">
+      <div class="nav-item">
+        <p class="nav-shop">
+          <a routerLink="/producto/lista">
+            Inicio
+          </a>
+        </p>
+      </div>
+      <div class="nav-item">
+        <a routerLink="/producto/checkout">
+          <div class="nav-checkout">
+            <div class="icon-container">
+              <em class=" icon material-icons" id="icon">shopping_cart</em>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="nav-item">
+        <p class="nav-shop">
+          <a routerLink="/paginaprincipal/login">
+            LogOut
+          </a>
+        </p>
+      </div>
+    </nav>
+
+    <div class="title-container">
+        Factura
+    </div>
+
+    <div class="user-container">
+      <div *ngFor="let fact of facturas">
+        <p> Nombre: {{fact.usuario.nom}}</p>
+        <p> Dirección:  {{fact.usuario.dir}}</p>
+      </div>
+    </div>
+
+    <div class="atr-container">
+      <div class="atr-half">
+        <p class="atr-text"> Cantidad </p>
+      </div>
+      <div class="atr-half">
+        <p class="atr-text"> Nombre </p>
+      </div>
+      <div class="atr-half">
+        <p class="atr-text"> Precio Unitario </p>
+      </div>
+      <div class="atr-half">
+        <p class="atr-text"> Subtotal </p>
+      </div>
+    </div>
+
+    <div class="item-container">
+      <div *ngFor="let desg of desglose">
+        <div class="item-half">
+          {{ desg.cantidad }}
+        </div>
+        <div class="item-half">
+          {{ desg.producto.nom }}
+        </div>
+        <div class="item-half">
+          {{ desg.producto.pre_uni }}
+        </div>
+        <div class="item-half">
+          {{ desg.pre_tot }}
+        </div>
+      </div>
+    </div>
+
+
+    <div class="under-container">
+      <div class="btn-container">
+        <p>Descargar Factura</p>
+        <a href="http://localhost:8000/api/facturas/pdf" class="btn" style="margin-bottom: 20px;">
+            <em class=" icon material-icons" id="icon">download</em>
+        </a>
+      </div>
+      <div class="tot-container">
+        <p>Precio Total: {{ mon_tot }}</p>
+      </div>
+    </div>
+</div>

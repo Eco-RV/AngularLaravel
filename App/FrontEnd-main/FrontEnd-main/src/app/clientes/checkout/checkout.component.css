@@ -1,0 +1,204 @@
+
+/* -- NavBar*/
+
+.navbar {
+  height: 100px;
+  width: 100%;
+  background-color: transparent;
+  transition: all ease-in-out 250ms;
+}
+
+.bg-primary-g{
+  background-color: #072a40;
+}
+
+
+.nav-item {
+  width: 20%;
+  line-height: 90px;
+  height: 90px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.nav-title {
+  font-family: Anton;
+  color: white;
+}
+
+
+.nav-shop {
+  font-family: Anton;
+  color: white;
+}
+.nav-shop a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+
+.nav-checkout {
+  width: 100%;
+  height: 95%;
+  padding-left: 100px;
+}
+
+
+
+.icon-container {
+  width: 200px;
+  height: 100%;
+  border-radius: 300px;
+  float: left;
+  background-color: white;
+  padding-top: 15px;
+}
+
+.icon {
+  color: #178CA4;
+  font-size: 60px;
+}
+
+
+
+.btn-color-cant  {
+  color: #072a40;
+}
+
+.btn-color-icon  {
+  color: #072a40;
+}
+
+
+/* -- End NavBar*/
+
+/*Item CheckOut*/
+
+
+/* CheckConteiner */
+.check-container {
+  width: 100%;
+  margin-top: 40px;
+  height: auto;
+  float: left;
+  padding-right: 200px;
+  padding-left: 200px;
+}
+
+.item-container {
+  width: 100%;
+  display: flex;
+
+  height: 70px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: black 2px 2px 2px 2px;
+  margin-left: 20px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+
+.item-container-half {
+  width: 22%;
+  height: 70px;
+  float: left;
+}
+.item-container-half-btn{
+  width: 12%;
+  height: 70px;
+  float: left;
+}
+
+
+.item-name {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.item-price {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.item-cant {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/*Delete*/
+.btn-delete {
+  height: 71px;
+  width: 100%;
+  background-color: brown;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+
+ }
+
+
+
+/*Comprar*/
+
+
+.item-container-btn {
+  width:100%;
+  padding-left: 30px;
+}
+
+.btn {
+
+  background-color: aqua;
+  border-radius: 12px;
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+
+}
+
+
+
+
+
+/*Atributos*/
+
+.atr-container {
+  margin-top: 220px;
+  margin-left: 160px;
+  height: 80px;
+  width: 70%;
+  display: flex;
+}
+
+.atr-container-half {
+  width: 50%;
+  float: left;
+  height: 80px;
+
+}
+
+.atr-title {
+  font-size: 60px;
+  color: aliceblue;
+}
+
+.atr-item-container {
+  width: 100%;
+  height: 80px;
+  margin-left: 130px;
+}
+
+.atr-item-half {
+  width: 25%;
+  float: left;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+}
+

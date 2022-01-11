@@ -1,0 +1,92 @@
+<nav class="navbar fixed-top" (scroll)="onWindowScroll()">
+  <div class="nav-item">
+    <div class="stock-tienda" style="margin-left: auto" >
+      <p routerLink="/admin/stock">Stock</p>
+    </div>
+  </div>
+  <div class="nav-item">
+      <div class="dropdown">
+        <button class="dropdown-btn" id="filtro">Filtro</button>
+        <div class="dropdown-content" id="dropdown" >
+          <a class="dropdown-item" (click)="getAll()"> Todos </a>
+          <div *ngFor="let categoria of categorias">
+            <a class="dropdown-item"  (click)="getAllCat(categoria.id)">{{
+              categoria.nom
+            }}</a>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Filtro Termina -->
+  <div class="nav-item">
+    <div class="agregar-prod">
+      <p routerLink="/admin/stock/agregar">Nuevo Producto</p>
+    </div>
+  </div>
+  <div class="nav-item">
+    <div class="stock-tienda">
+      <p routerLink="/paginaprincipal/login">LogOut</p>
+    </div>
+  </div>
+</nav>
+<div class="list-item-container">
+  <div *ngFor="let producto of productos">
+    <div class="list-item">
+      <!-- Imagen -->
+      <div class="item-image">
+        <img
+          src="http://localhost:8000/api/imagenes/{{ producto.img }}"
+          alt=""
+        />
+      </div>
+      <div class="item-content">
+        <!-- Nombre -->
+        <div class="item-title-box">
+          <h1 class="item-title-name">{{ producto.nom }}</h1>
+        </div>
+
+        <h1 class="item-atr">Productos Actuales:</h1>
+        <p class="item-text">{{ producto.cant }}</p>
+
+        <!-- Botones -->
+        <!-- Agregar Unidad -->
+        <button type="button" class="btn-agregar" (click)="aumentarInventario(producto)">Agregar Unidad(es)</button>
+        <!-- Eliminar Unidad -->
+        <button type="button" class="btn-agregar" (click)="disminuirInventario(producto)">Eliminar Unidad(es)</button>
+        <div>
+          <div class="cant-container">
+            <div class="cant-half">
+              <button
+                class="btn-max"
+                type="button"
+                (click)="aumentar(producto)"
+              >
+                +
+              </button>
+            </div>
+            <div class="cant-half-label">
+              <p class="cant-label">{{ producto.cantlleva }}</p>
+            </div>
+            <div class="cant-half">
+              <button
+                class="btn-min"
+                type="button"
+                (click)="disminuir(producto)"
+              >
+                -
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Eliminar Producto -->
+        <button
+          type="button"
+          (click)="eliminar(producto.id)"
+          class="btn-agregar"
+        >
+          Eliminar Producto
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

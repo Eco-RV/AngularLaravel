@@ -1,0 +1,108 @@
+
+<!-- ListaPage Items Container -->
+<div class="list-container">
+
+
+  <nav class="navbar fixed-top" (scroll)="onWindowScroll()">
+    <div class="nav-item">
+      <p class="nav-shop">
+        <a routerLink="/producto/lista">
+          Inicio
+        </a>
+      </p>
+    </div>
+    <div class="nav-item">
+      <a routerLink="/producto/checkout">
+        <div class="nav-checkout">
+          <div class="icon-container">
+            <em class=" icon material-icons" id="icon">shopping_cart</em>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="nav-item">
+      <p class="nav-shop">
+        <a routerLink="/paginaprincipal/login">
+          LogOut
+        </a>
+      </p>
+    </div>
+  </nav>
+
+  <!-- Filter Start -->
+  <div class="filter-container">
+    <div class="dropdown">
+      <button class="dropdown-btn">
+        Filtro
+      </button>
+      <div class="dropdown-content">
+        <a class="dropdown-item" (click)="getAll()"> Todos </a>
+        <div *ngFor="let categoria of categorias">
+          <a class="dropdown-item" (click)="getAllCat(categoria.id)">{{ categoria.nom }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Filter End -->
+
+
+
+  <!-- Item Start -->
+  <div class="list-item-container">
+    <div *ngFor="let producto of productos">
+      <div class="list-item">
+        <!-- Image -->
+        <div class="item-image">
+          <img src="http://localhost:8000/api/imagenes/{{ producto.img }}" alt="">
+        </div>
+        <div class="item-content">
+          <!-- Nombre -->
+          <div class="item-title-box">
+            <h1 class="item-title-name">{{producto.nom}}</h1>
+          </div>
+          <!-- Descripción -->
+          <div class="desc-container">
+            <h1 class="item-atr">Descripción: </h1>
+            <p class="item-text">{{producto.desc}}</p>
+          </div>
+          <!-- Precio -->
+          <h1 class="item-atr">Precio: </h1>
+          <p class="item-text"> ₡{{producto.pre_uni}} </p>
+          <!-- Precio -->
+          <h1 class="item-atr">Categoria: </h1>
+          <p class="item-text"> {{producto.categoria.nom}} </p>
+
+          <!-- Botones -->
+          <button type="button" class="btn-agregar" [routerLink]="['/producto/lista/', producto.id]"
+            (click)="addToCart(producto, producto.cantlleva)"
+            (click)="acumularTotalPrecio(producto.pre_uni,producto.cant)"
+            (click)="acumularTotalCant(producto.cant)">
+
+            Agregar
+          </button>
+          <div>
+            <div class="cant-container">
+              <div class="cant-half">
+                <button class="btn-max" type="button" (click)="aumentar(producto)">
+                  +
+                </button>
+              </div>
+              <div class="cant-half-label">
+                <p class="cant-label">{{producto.cantlleva}}</p>
+              </div>
+              <div class="cant-half">
+                <button class="btn-min" type="button" (click)="disminuir(producto)">
+                  -
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Item End -->
+
+</div>
+<!-- ListaPage Items Container End -->
